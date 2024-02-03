@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/mailfont.ttf') format('truetype');
+}
+
+body {
+    background-color: #76b9e3;
+    background-image: url('images/backgroundplain.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'CustomFont', sans-serif;
+    color: #76b9e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 3s ease-in-out forwards;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    0% {
+        background-image: url('images/backgroundplain.png');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('images/sunhavenmail1.png');
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMail {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBackground {
+    0% {
+        background-image: url('images/sunhavenmail1.png');
+    }
+    100% {
+        background-image: url('images/lanternback.gif');
+    }
+}
+
+.mail-image {
+    /* Initial styles for the mail image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}

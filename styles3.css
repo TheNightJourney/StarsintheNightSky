@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/mailfont.ttf') format('truetype');
+}
+
+body {
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'CustomFont', sans-serif;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 3s ease-in-out forwards;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    0% {
+        background-image: url('images/lanternback.gif');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('images/sunhavenmail.png');
+        opacity: 1;
+    }
+}
+
+button {
+    opacity: 0;
+    animation: fadeInButton 3s ease-in-out forwards;
+    position: relative;
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

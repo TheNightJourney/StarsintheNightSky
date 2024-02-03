@@ -1,0 +1,105 @@
+/* styles.css */
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/fontstyle.ttf') format('truetype');
+}
+
+body {
+    background-color: black;
+    background: url('images/backgroundplain.png') no-repeat center/cover;
+    color: lightblue;
+    font-family: 'CustomFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative; /* Add this line */
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 10em;
+    margin: 0;
+    align-self: center;
+    color: #000;
+    bottom: 10%;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0;
+    align-self: center;
+    color: #000;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 50px;
+    font-size: 18px;
+    font-family: 'CustomFont', sans-serif;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 100%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#clouds {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    bottom: 5%;
+    height: auto;
+    z-index: -3;
+}
+
+.moving-clouds {
+    animation: moveClouds 15s linear forwards infinite;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#plains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -2; 
+}
+
+#grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
